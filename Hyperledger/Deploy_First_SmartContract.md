@@ -16,11 +16,7 @@ cd fabric-samples/test-network
 ```
 # Use Golang
 cd ../asset-transfer-basic/chaincode-go
-```
-
 # After that you can run WSL in VSCode to code your first smart contract
-```
-peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-chaincode/ --lang golang --label basic_1.0
 ```
 
 # Move you folder contain your chaincode to folder test-network
@@ -41,6 +37,7 @@ cd ../test-network
 # Create chaincode package
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
+peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-chaincode/ --lang golang --label basic_1.0
 peer version
 peer lifecycle chaincode package basic.tar.gz --path ../asset-transfer-chaincode/ --lang golang --label basic_1.0
 
